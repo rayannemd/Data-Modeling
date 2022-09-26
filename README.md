@@ -1,2 +1,2 @@
-# provabd
-Prova de banco de dados
+# Modelagem do banco de dados
+Repositório para modelagem do banco de dados.
