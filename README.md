@@ -1,5 +1,4 @@
 # Modelagem do banco de dados
-Modelagem Universidade.
 
 Repositório para modelagem do banco de dados. 
 
@@ -7,14 +6,44 @@ Repositório para modelagem do banco de dados.
 # Mapa Conceitual
 ![](bdconceitual1.png)
 
-## 
+## Descrição das tabelas do modelo conceitual
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## _Entidade aluno_
+A entidade aluno serve para identificar e guardar os dados de um determinado aluno da universidade, tendo como seu identificador a matrícula (MAT). A entidade se relaciona com histórico, possuindo cardinalidade de 1,1, já que, um aluno pode ter apenas um histórico, tal qual um histórico pode ter apenas um aluno.
+Seus atributos são: MAT (número da matrícula), nome (nome completo do aluno), endereço e cidade(endereço e cidade em que o aluno reside).
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+## _Entidade historico_
+O histórico possui a utilidade de guardar dados escolares de um determinado aluno, tal como turma, disciplinas e professores que o mesmo veio a ter. Deste modo se faz necessário a ligação (relacionamento) entre eles. Quanto à cardinalidade dos relacionamentos, exceto de aluno (como já foi esclarecido anteriormente), serão 1,n, tendo em vista que, por ser somente um histórico para um aluno, as turmas, disciplinas e professores aparecerão também nos históricos de outros alunos. Ex: 1 disciplina pode aparecer em n históricos, já que não existe somente um aluno.
+Seus atributos são: frequência e nota.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+## _Entidade turma_
+Responsável por armazenar dados da turma, tais como (atributos): código da turma, ano (ano em que a turma cursa) e horário(calendário de aulas). A turma se relaciona com disciplinas (uma ou mais), pois a turma as estuda; e professores (um ou mais), que são responsáveis por lecionarem as aulas.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+## _Entidade disciplinas_
+Armazena dados sobre as disciplinas da universidade, como por exemplo os seguintes atributos: código da disciplina, nome da disciplina (português. matemática, etc) e sua carga horária. Se relaciona com histórico, como já foi citado anteriormente e com turma, podendo estar presente em uma ou mais turmas (1,n).
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+## _Entidade professores_
+Guarda as informações pessoais dos professores como (atributos): código do professor, nome (nome completo do professor), endereço e cidade (endereço e cidade em que o aluno reside). Se relaciona com histórico, como mencionado acima, e também com turma, podendo ter uma ou mais (1,n).
+
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 # Mapa Lógico
 ![](bdlogico1.png)
 
-## Descrição das tabelas do modelo
+## Descrição das tabelas do modelo lógico
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
